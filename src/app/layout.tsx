@@ -1,3 +1,5 @@
+import { AppNavbar } from "@/components/shared/app-navbar/nav-bar";
+import { Providers } from "@/providers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -37,8 +39,10 @@ export default function RootLayout({
         className={` ${geistSans.className} ${geistMono.variable} h-screen w-screen antialiased`}
       >
         <div className="flex h-full w-full flex-col">
-          {/* <AppNavbar /> */}
-          <main className="flex-grow">{children}</main>
+          <Providers>
+            <AppNavbar />
+            <main className="flex-grow">{children}</main>
+          </Providers>
         </div>
       </body>
     </html>

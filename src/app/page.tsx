@@ -3,10 +3,10 @@ import { IconFlame } from "@tabler/icons-react";
 
 export default function Home() {
   return (
-    <div className="flex h-[500px] flex-col items-center justify-center gap-10 font-[family-name:var(--font-geist-sans)] sm:p-20 md:h-full">
+    <div className="container flex h-[500px] flex-col items-center justify-center gap-10 font-[family-name:var(--font-geist-sans)] sm:p-20 md:h-full">
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <div className="flex flex-col items-center gap-y-5 text-4xl font-bold tracking-tighter md:flex-row md:gap-x-2 md:text-5xl">
-          <IconFlame size={56} fill="#ba84fe" color="#7c3aed" />
+          <IconFlame size={56} fill="#fdde00" color="#ee892f" />
           Fire-stack: A light-weight Next.js starter
         </div>
         <p className="text-balance font-[family-name:var(--font-geist-mono)] text-xs md:text-sm">
