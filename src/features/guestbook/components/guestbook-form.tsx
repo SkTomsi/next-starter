@@ -8,8 +8,8 @@ import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import { useFormState } from "react-dom";
 
+import { createGuestbookEntry } from "../../../app/actions";
 import { GuestbookSchema } from "../models";
-import { createGuestbookEntry } from "../queries/actions";
 
 export function GuestbookForm() {
   const [lastResult, action] = useFormState(createGuestbookEntry, undefined);
@@ -31,18 +31,18 @@ export function GuestbookForm() {
       <div className="w-full md:w-1/2">
         <Card>
           <CardHeader>
-            <p className="text-7xl font-medium tracking-tighter">
+            <p className="text-2xl font-medium tracking-tighter">
               Leave a kawai msg!
             </p>
           </CardHeader>
           <CardContent>
             <form
-              className="grid gap-6"
+              className="flex flex-col gap-4"
               action={action}
               onSubmit={form.onSubmit}
               id={form.id}
             >
-              <div className="grid gap-2">
+              <div className="space-y-2">
                 <Label>Username</Label>
                 <Input
                   type="username"

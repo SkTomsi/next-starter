@@ -1,5 +1,5 @@
 {
-  "id": "e1c85d2b-f367-47b7-ad3b-bd7c41cbcd15",
+  "id": "55c0136c-98df-4942-83ce-7f5bcc996fc7",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -10,12 +10,12 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "serial",
           "primaryKey": true,
           "notNull": true
         },
-        "text": {
-          "name": "text",
+        "message": {
+          "name": "message",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -25,6 +25,13 @@
           "type": "text",
           "primaryKey": false,
           "notNull": true
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
         }
       },
       "indexes": {},
