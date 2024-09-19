@@ -12,7 +12,9 @@ export function AuthButton() {
     <>
       {status === "authenticated" ? (
         <div className="flex items-center gap-x-2 font-bold tracking-tighter">
-          <p className="text-balance">Welcome back, {data?.user?.name}</p>
+          <p className="hidden text-balance md:block">
+            Welcome back, {data?.user?.name}
+          </p>
           <Button onClick={() => signOut()}>Sign Out</Button>
         </div>
       ) : (

@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { IconFlame } from "@tabler/icons-react";
+import { IconFlame, IconMessage } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container flex h-[500px] flex-col items-center justify-center gap-10 font-[family-name:var(--font-geist-sans)] sm:p-20 md:h-full">
+    <div className="container mt-16 flex h-full flex-col items-center justify-center gap-10 font-[family-name:var(--font-geist-sans)] sm:p-20 md:h-full">
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <div className="flex flex-col items-center gap-y-5 text-4xl font-bold tracking-tighter md:flex-row md:gap-x-2 md:text-5xl">
           <IconFlame size={56} fill="#fdde00" color="#ee892f" />
@@ -15,9 +16,11 @@ export default function Home() {
           keeping it sleek and lit, with all the essentials to make it pop. 🔥💻
         </p>
       </div>
-      <Button className="w-fit" size={"lg"}>
-        Get Started
-      </Button>
+      <Link href={"/guestbook"}>
+        <Button className="w-fit" size={"lg"}>
+          Drop a <IconMessage className="ml-2" />
+        </Button>
+      </Link>
       <div className="absolute inset-0 -z-[9] bg-[url(/grains.svg)] bg-cover bg-center mix-blend-soft-light"></div>
       <div className="absolute inset-0 -z-10 bg-[url(/gradient-light.svg)] bg-cover bg-center [mask-image:linear-gradient(360deg,white,rgba(255,255,255,0))]"></div>
     </div>
